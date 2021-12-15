@@ -82,11 +82,11 @@ hint: the strings returned need to exactly match the string in step 4.
 function getWinnersByYear(array, datacb, getYearscb, winnersOnly) {
     const winners = winnersOnly( data, getFinals);
     const years = getYearscb(data, getFinals);
-    const data = data(data, getFinals);
+    const data = datacb(data, getFinals);
     return winners.map((item, index) => `In ${years[index]}, ${item} won the world cup!`);
 }
-
-
+//console.log( getWinnersByYear(fifaData, getFinals));
+// console.log won't pass the functions don't know where im going wrong
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use the higher order function getAverageGoals to do the following: 
